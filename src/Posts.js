@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
 import List from "./List";
-import { DataContext } from "./shared/DataContext";
+import useDataContext from "./shared/useDataContext";
 
 function Posts() {
-  const { posts } = useContext(DataContext);
+  const { posts } = useDataContext();
   return (
     <section>
       <List posts={posts} />

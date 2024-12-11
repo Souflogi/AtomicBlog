@@ -1,10 +1,10 @@
-import { useState, useContext } from "react";
-import { DataContext } from "./shared/DataContext";
+import { useState } from "react";
+import useDataContext from "./shared/useDataContext";
 
 function FormAddPost() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const { onAddPost } = useContext(DataContext);
+  const { onAddPost } = useDataContext();
   const handleSubmit = function (e) {
     e.preventDefault();
     if (!body || !title) return;

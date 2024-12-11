@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
-import { DataContext } from "./shared/DataContext";
+import useDataContext from "./shared/useDataContext";
 
 function Results() {
-  const { posts } = useContext(DataContext);
+  const { posts } = useDataContext();
 
   return <p>🚀 {posts.length} atomic posts found</p>;
 }

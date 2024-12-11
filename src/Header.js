@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
 import Results from "./Results";
 import SearchPosts from "./SearchPosts";
-import { DataContext } from "./shared/DataContext";
+import useDataContext from "./shared/useDataContext";
 
 function Header() {
-  const { onClearPosts } = useContext(DataContext);
+  const { onClearPosts } = useDataContext();
 
   return (
     <header>

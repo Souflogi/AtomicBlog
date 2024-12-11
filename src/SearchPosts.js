@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { DataContext } from "./shared/DataContext";
+import useDataContext from "./shared/useDataContext";
 
 function SearchPosts() {
-  const { searchQuery, setSearchQuery } = useContext(DataContext);
+  const { searchQuery, setSearchQuery } = useDataContext();
   return (
     <input
       value={searchQuery}
